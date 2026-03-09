@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github-Profile-Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+
+        <h1>Github Profile Explorer</h1>
+
+        <form id="searchform">
+            <input id="searchbox" placeholder="Enter Github username" type="text" required>
+            <button id="searchbtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+
+        <div class="profile">
+            <img id="dp" src="" alt="github dp">
+            <h2 id="name">Name</h2>
+            <h3 id="username">@username</h3>
+            <p id="desc">Description</p>
+            <div class="profile-spec">
+                <h3 id="followers">Followers :</h3>
+                <h3 id="following">Following :</h3>
+                <h3 id="repo-created">Repository: </h3>
+            </div>
+        </div>
+
+        <div class="repo-detail">
+            <h2>Repositories</h2>
+            <div class="controls">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="stars">Stars</option>
+                    <option value="name">Name</option>
+                    <option value="updated">Last Updated</option>
+                </select>
+
+                <label for="filter">Filter</label>
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                </select>
+
+            </div>
+
+            <div class="repo-container">
+                <div class="repo-card">
+                    <h3 class="repo-name">Repo Name</h3>
+                    <p class="repo-desc">Description</p>
+                    
+                    <div class="repo-info">
+                        <span class="stars">⭐</span>
+                        <span class="language">JS</span>
+                    </div>
+                    <a class="vog" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
