@@ -250,3 +250,13 @@ h1{
     letter-spacing: 0.02em;
     align-self: flex-start;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.vog:hover{
+    background:#3b82f6;
+    transform: translateY(-1px);
+}
