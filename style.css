@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: #090d13;
+    color: rgba(255, 255, 255, 0.87);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem 4rem;
+}
+
+.container{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1{
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 800;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+#search-form{
+    display: flex;
+    gap: 0.6rem;
+    background: #0f1620;
+    border: 1px solid #1e2d45;
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+#searchbox{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0.6rem 0.8rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: monospace;
+}
+
+#searchbtn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #58a6ff;
+    color: #0d1117;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+}
+
+.profile{
+    background: #0f1620;
+    border: 1px solid #1e2d45;
+    border-radius: 16px;
+    padding: 1.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 1.6rem;
+    row-gap: 0.3rem;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+#dp{
+    grid-row: 1 / 5;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2.5px solid #1e2d45;
+    object-fit: cover;
+    background: #141c2b;
+    transition: border-color 0.3s;
+    display: block
+}
+
+#name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.87);
+    letter-spacing: -0.02em;
+    align-self: end;
+    margin-top: 0.4rem;
+}
+
+#username {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #58a6ff;
+}
+
+#desc {
+    font-size: 0.9rem;
+    color: #7d8590;
+    line-height: 1.5;
+    margin-top: 0.1rem;
+}
+
+.profile-spec {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+}
+
+.profile-spec h3 {
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #7d8590;
+}
+
+
+.profile-spec h3 span {
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 600;
+}
+
+.repo-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.repo-detail > h2 {
+    font-weight: 700;
+    color: #7d8590;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #1e2d45;
+    padding-bottom: 0.7rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    font-size: 0.8rem;
+    color: #7d8590;
+    font-family: monospace;
+}
+
+.controls select {
+    background: #0f1620;
+    border: 1px solid #1e2d45;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: monospace;
+    font-size: 0.82rem;
+    padding: 0.45rem 2rem 0.45rem 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+}
+
+.repo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.repo-card {
+    background: #0f1620;
+    border: 1px solid #1e2d45;
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.repo-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #58a6ff;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.repo-desc {
+    font-size: 0.82rem;
+    color: #7d8590;
+    line-height: 1.5;
+    flex: 1;
+    overflow: hidden;
+}
+
+.repo-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.stars {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #e3b341;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.language {
+    font-family: monospace;
+    font-size: 0.75rem;
+    background: #141c2b;
+    border: 1px solid #1e2d45;
+    border-radius: 20px;
+    padding: 0.15rem 0.7rem;
+    color: #7d8590;
+}
+
+
+.vog {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: #58a6ff;
+    color: #0d1117;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    align-self: flex-start;
+}
