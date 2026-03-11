@@ -10,9 +10,9 @@ This project was built to practice working with APIs and asynchronous JavaScript
 
 ---
 
-##Result
+## Result
 
-! [Project Result](output.png)
+![Project Result](output.png)
 
 
 ## Features
