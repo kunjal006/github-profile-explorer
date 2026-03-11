@@ -1,10 +1,19 @@
 # GitHub Profile Explorer 🔍
 
+## Preview
+
+![Project Preview](preview.png)
+
 A simple web app that lets you search any GitHub username and view their public profile information such as avatar, bio, repositories, followers and following.
 
 This project was built to practice working with APIs and asynchronous JavaScript.
 
 ---
+
+##Result
+
+! [Project Result](output.png)
+
 
 ## Features
 
