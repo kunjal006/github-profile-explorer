@@ -1,72 +1,61 @@
 # GitHub Profile Explorer 🔍
 
-A small web app that allows you to search for any GitHub user and view their profile details. It fetches data directly from the GitHub API and displays useful information such as the user’s avatar, bio, repositories, followers, and following.
+A simple web app that lets you search any GitHub username and view their public profile information such as avatar, bio, repositories, followers and following.
 
-This project was mainly built to practice working with APIs and handling asynchronous JavaScript while updating the UI dynamically.
+This project was built to practice working with APIs and asynchronous JavaScript.
 
-Features
+---
 
-Search for any GitHub username
+## Features
 
-Displays profile picture and basic user details
+- Search for any GitHub user
+- Displays profile avatar and basic details
+- Shows followers, following and repository count
+- Handles invalid usernames
+- Simple and clean UI
 
-Shows number of repositories, followers, and following
+---
 
-Handles invalid usernames gracefully
+## Tech Stack
 
-Simple and clean user interface
+- HTML
+- CSS
+- JavaScript
+- GitHub REST API
 
-Tech Stack
+---
 
-HTML5 – page structure
+## Project Structure
 
-CSS3 – styling
-
-JavaScript (ES6) – API calls and dynamic content
-
-GitHub REST API – fetching user data
-
-How It Works
-
-When a username is entered in the search field:
-
-The app sends a request to the GitHub API.
-
-The API returns the user’s public profile data.
-
-JavaScript processes the response and updates the UI with the retrieved information.
-
-Project Structure
+```
 github-profile-explorer
 │
 ├── index.html
 ├── style.css
 └── script.js
+```
 
-index.html – main layout of the application
+---
 
-style.css – styling for the interface
+## How to Run
 
-script.js – handles API requests and updates the UI
+1. Clone the repository
 
-Running the Project
-
-Clone the repository
-
+```
 git clone https://github.com/kunjal006/github-profile-explorer.git
+```
 
-Open the project folder
+2. Open the folder
 
-Run index.html in your browser.
+3. Run `index.html` in your browser
 
-Learning Goals
+---
 
-This project helped me practice:
+## What I Learned
 
-Working with external APIs
+- Fetching data from APIs
+- Using async / await
+- Handling API errors
+- Updating the DOM dynamically
 
-Using async/await with fetch
-
-Handling user input and form events
-
-Updating the DOM dynamically
+---
