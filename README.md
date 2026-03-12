@@ -34,18 +34,6 @@ This project was built to practice working with APIs and asynchronous JavaScript
 
 ---
 
-## Project Structure
-
-```
-github-profile-explorer
-│
-├── index.html
-├── style.css
-└── script.js
-```
-
----
-
 ## How to Run
 
 1. Clone the repository
