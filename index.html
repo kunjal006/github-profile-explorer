@@ -13,6 +13,10 @@
 <body>
     <div class="container">
 
+        <button id="theme" aria-label="Change Theme">
+            <i class ="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
         <h1>Github Profile Explorer</h1>
 
         <form id="searchform">
@@ -29,6 +33,39 @@
                 <h3 id="followers">Followers :</h3>
                 <h3 id="following">Following :</h3>
                 <h3 id="repo-created">Repository: </h3>
+            </div>
+        </div>
+
+
+        <div class="analysis">
+            <h2> Profile Analysis</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <div class="info">
+                        <span class="analysis-value"></span>
+
+                        <span class="analysis-label">Total Repositories</span>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="analysis-info">
+                        <span class="analysis-value"></span>
+
+                        <span class="analysis-label">Total Stars</span>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <i class="fa-solid fa-code"></i>
+                    <div class="analysis-info">
+                        <span class="analysis-value">Most Used Language</span>
+
+                        <span class="analysis-label">Language</span>
+                    </div>
+                </div>
             </div>
         </div>
 
