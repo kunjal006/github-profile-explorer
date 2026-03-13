@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,14 @@
     <div class="container">
 
         <button id="theme" aria-label="Change Theme">
-            <i class ="fa-solid fa-moon" id="theme-icon"></i>
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
         <h1>Github Profile Explorer</h1>
 
         <form id="searchform">
             <input id="searchbox" placeholder="Enter Github username" type="text" required>
-            <button id="searchbtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            <button id="searchbtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
         </form>
 
         <div class="profile">
@@ -36,15 +36,14 @@
             </div>
         </div>
 
-
         <div class="analysis">
-            <h2> Profile Analysis</h2>
+            <h2>Profile Analysis</h2>
             <div class="grid">
+
                 <div class="card">
                     <i class="fa-solid fa-book-bookmark"></i>
                     <div class="info">
-                        <span class="analysis-value"></span>
-
+                        <span class="analysis-value" id="total-repos">—</span>
                         <span class="analysis-label">Total Repositories</span>
                     </div>
                 </div>
@@ -52,8 +51,7 @@
                 <div class="analysis-card">
                     <i class="fa-solid fa-star"></i>
                     <div class="analysis-info">
-                        <span class="analysis-value"></span>
-
+                        <span class="analysis-value" id="total-stars">—</span>
                         <span class="analysis-label">Total Stars</span>
                     </div>
                 </div>
@@ -61,11 +59,11 @@
                 <div class="analysis-card">
                     <i class="fa-solid fa-code"></i>
                     <div class="analysis-info">
-                        <span class="analysis-value">Most Used Language</span>
-
-                        <span class="analysis-label">Language</span>
+                        <span class="analysis-value" id="top-language">—</span>
+                        <span class="analysis-label">Most Used Language</span>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -87,14 +85,12 @@
                     <option value="html">HTML</option>
                     <option value="css">CSS</option>
                 </select>
-
             </div>
 
             <div class="repo-container">
                 <div class="repo-card">
                     <h3 class="repo-name">Repo Name</h3>
                     <p class="repo-desc">Description</p>
-                    
                     <div class="repo-info">
                         <span class="stars">⭐</span>
                         <span class="language">JS</span>
@@ -103,6 +99,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <script src="app.js"></script>
 </body>
