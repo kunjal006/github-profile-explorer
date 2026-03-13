@@ -2,7 +2,6 @@ const search = document.querySelector("form input");
 const form = document.querySelector("#searchform");
 const BASE_URL = `https://api.github.com/users/`;
 
-// ── Dark Mode Toggle ───────────────────────────────
 const themeBtn = document.querySelector("#theme");
 const themeIcon = document.querySelector("#theme-icon");
 
@@ -12,7 +11,6 @@ themeBtn.addEventListener("click", () => {
     themeIcon.className = isDark ? "fa-regular fa-lightbulb" : "fa-solid fa-moon";
 });
 
-// ── Sort & Filter ──────────────────────────────────
 const sortSelect = document.querySelector("#sort");
 const filterSelect = document.querySelector("#filter");
 
@@ -21,7 +19,6 @@ let allRepos = [];
 sortSelect.addEventListener("change", () => renderRepos(allRepos));
 filterSelect.addEventListener("change", () => renderRepos(allRepos));
 
-// ── Form Submit ────────────────────────────────────
 form.addEventListener("submit", async (evt) => {
     evt.preventDefault();
 
@@ -39,7 +36,6 @@ form.addEventListener("submit", async (evt) => {
     renderRepos(allRepos);
 });
 
-// ── Fetch User ─────────────────────────────────────
 async function fetchUser(username) {
     try {
         const response = await fetch(`${BASE_URL}${username}`);
@@ -55,7 +51,6 @@ async function fetchUser(username) {
     }
 }
 
-// ── Profile Details ────────────────────────────────
 function profileDetails(username, data) {
     document.querySelector("#dp").src = data.avatar_url;
     document.querySelector("#name").innerText = data.name || username;
@@ -66,7 +61,6 @@ function profileDetails(username, data) {
     document.querySelector("#repo-created").innerText = "Repositories: " + data.public_repos;
 }
 
-// ── Load Repos ─────────────────────────────────────
 async function repoLoad(username) {
     try {
         const response = await fetch(`${BASE_URL}${username}/repos?per_page=100`);
@@ -78,7 +72,6 @@ async function repoLoad(username) {
     }
 }
 
-// ── Analytics ──────────────────────────────────────
 function updateAnalytics(repos) {
     const totalRepos = repos.length;
     const totalStars = repos.reduce((sum, r) => sum + r.stargazers_count, 0);
@@ -97,7 +90,6 @@ function updateAnalytics(repos) {
     document.querySelector("#top-language").innerText = topLang ? topLang[0] : "N/A";
 }
 
-// ── Sort & Filter Logic ────────────────────────────
 function getProcessedRepos(repos) {
     const sortBy = sortSelect.value;
     const filterBy = filterSelect.value.toLowerCase();
@@ -116,7 +108,6 @@ function getProcessedRepos(repos) {
     return filtered;
 }
 
-// ── Render Repos ───────────────────────────────────
 function renderRepos(repos) {
     const container = document.querySelector(".repo-container");
     const processed = getProcessedRepos(repos);
