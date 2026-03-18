@@ -36,10 +36,10 @@ It fetches the details of the user from the Github website and displays it on th
 ## 📸 Screenshots
 
 ### 🌙 Dark Mode
-![Dark Mode](./screenshots/dark.png)
+![Dark Mode](./images/output_dark.png)
 
 ### ☀️ Light Mode
-![Light Mode](./screenshots/light.png)
+![Light Mode](./images/output_light.png)
 
 ---
 
